@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: minico-flask
+    env: python
+    buildCommand: ""
+    startCommand: python transport_minico_flask/app.py
+    plan: free 
