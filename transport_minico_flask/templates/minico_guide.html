@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Présentation & Guide MINICO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+        color: #222;
+        font-family: "Montserrat", "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .guide-header {
+        background: transparent;
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        text-shadow: 0 2px 8px #4e54c8;
+      }
+      .guide-container {
+        max-width: 900px;
+        margin: 2rem auto;
+        background: rgba(255, 255, 255, 0.97);
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        padding: 2.5rem 2rem 2rem 2rem;
+        position: relative;
+        z-index: 2;
+      }
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #4e54c8;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .section-title i {
+        color: #8f94fb;
+        font-size: 1.4rem;
+      }
+      .guide-desc {
+        font-size: 1.13rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .step {
+        background: linear-gradient(90deg, #e0e7ff 0%, #f5f7fa 100%);
+        border-radius: 1.2rem;
+        box-shadow: 0 2px 8px rgba(78, 84, 200, 0.08);
+        padding: 1.2rem 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .step:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 24px rgba(78, 84, 200, 0.13);
+      }
+      .step-icon {
+        font-size: 2.1rem;
+        color: #4e54c8;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+      .step-content {
+        flex: 1;
+      }
+      .step-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 0.3rem;
+      }
+      .step-desc {
+        font-size: 1.05rem;
+        color: #444;
+      }
+      .tip {
+        background: #e0e7ff;
+        color: #4e54c8;
+        border-left: 5px solid #8f94fb;
+        padding: 1rem 1.2rem;
+        border-radius: 0.7rem;
+        margin: 2rem 0 1.5rem 0;
+        font-size: 1.08rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .tip i {
+        font-size: 1.3rem;
+      }
+      .back-btn {
+        display: inline-block;
+        margin-top: 2.5rem;
+        background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.8rem 2.2rem;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 4px 16px rgba(31, 38, 135, 0.13);
+      }
+      .back-btn:hover {
+        background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+        transform: scale(1.04);
+        color: #fff;
+      }
+      @media (max-width: 700px) {
+        .guide-container {
+          padding: 1.2rem 0.5rem;
+        }
+        .guide-header {
+          font-size: 1.3rem;
+        }
+        .section-title {
+          font-size: 1.1rem;
+        }
+        .step-title {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="guide-header">
+      <i class="fa fa-lightbulb"></i> Présentation & Guide de la méthode MINICO
+    </header>
+    <div class="guide-container">
+      <div class="section-title">
+        <i class="fa fa-rocket"></i> Qu'est-ce que la méthode MINICO ?
+      </div>
+      <div class="guide-desc">
+        La méthode <b>MINICO</b> est une technique moderne d'optimisation des
+        coûts de transport entre plusieurs fournisseurs et clients.<br />
+        Elle permet de trouver rapidement une solution efficace pour minimiser
+        les coûts tout en respectant les contraintes d'offre et de demande.<br />
+        <br />
+        <b>Avantages :</b> rapidité, simplicité, visualisation claire des flux,
+        et base solide pour l'optimisation avancée.
+      </div>
+      <div class="section-title">
+        <i class="fa fa-globe"></i> Utilité dans la vie quotidienne
+      </div>
+      <div class="guide-desc">
+        La méthode MINICO s'applique à de nombreux domaines du transport dans la
+        vie quotidienne :
+        <ul style="margin: 0 0 0 1.2em; color: #444">
+          <li>Livraison de marchandises entre entrepôts et magasins</li>
+          <li>Distribution de produits alimentaires ou pharmaceutiques</li>
+          <li>
+            Gestion des stocks et des flux logistiques dans la grande
+            distribution
+          </li>
+          <li>
+            Optimisation des tournées de livraison pour réduire les coûts et
+            l'empreinte carbone
+          </li>
+          <li>
+            Répartition efficace des ressources (ex : carburant, matériaux,
+            équipements) entre différents sites
+          </li>
+        </ul>
+        <br />
+        Grâce à cette méthode, les entreprises peuvent économiser du temps, de
+        l'argent et limiter leur impact environnemental en optimisant chaque
+        trajet.
+      </div>
+      <div class="section-title">
+        <i class="fa fa-industry"></i> Quelles entreprises doivent utiliser
+        cette application ?
+      </div>
+      <div class="guide-desc">
+        Toute entreprise qui gère des flux importants de marchandises ou de
+        ressources entre plusieurs points est concernée, notamment :
+        <ul style="margin: 0 0 0 1.2em; color: #444">
+          <li>Les sociétés de transport et de logistique</li>
+          <li>
+            Les groupes de grande distribution (supermarchés, chaînes de
+            magasins)
+          </li>
+          <li>Les industriels ayant plusieurs usines ou dépôts</li>
+          <li>
+            Les plateformes e-commerce avec gestion de stocks multi-entrepôts
+          </li>
+          <li>Les entreprises de livraison rapide ou de messagerie</li>
+        </ul>
+        <br />
+        Pour ces entreprises, l'utilisation d'une application basée sur la
+        méthode MINICO n'est pas seulement un atout, mais souvent une nécessité
+        pour rester compétitif, respecter les délais et maîtriser les coûts
+        logistiques.
+      </div>
+      <div class="section-title">
+        <i class="fa fa-map-signs"></i> Guide étape par étape
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon"><i class="fa fa-database"></i></div>
+          <div class="step-content">
+            <div class="step-title">1. Saisie des données</div>
+            <div class="step-desc">
+              Indiquez le nombre de fournisseurs, de clients, les offres, les
+              demandes et le tableau des coûts unitaires de transport.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon"><i class="fa fa-calculator"></i></div>
+          <div class="step-content">
+            <div class="step-title">2. Calcul automatique</div>
+            <div class="step-desc">
+              L'application applique la méthode MINICO pour allouer les
+              quantités de façon optimale colonne par colonne, en minimisant les
+              coûts.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon"><i class="fa fa-chart-line"></i></div>
+          <div class="step-content">
+            <div class="step-title">3. Visualisation</div>
+            <div class="step-desc">
+              Obtenez une visualisation graphique des flux de transport entre
+              fournisseurs et clients, ainsi qu'un résumé des allocations et du
+              coût total.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-icon"><i class="fa fa-magic"></i></div>
+          <div class="step-content">
+            <div class="step-title">4. Optimisation avancée</div>
+            <div class="step-desc">
+              Vous pouvez ensuite utiliser la méthode Stepping Stone pour
+              vérifier et améliorer la solution si besoin.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tip">
+        <i class="fa fa-info-circle"></i> <b>Astuce :</b> Essayez l'application
+        avec vos propres données pour voir la méthode MINICO en action !
+      </div>
+      <a href="{{ url_for('menu') }}" class="back-btn"
+        ><i class="fa fa-arrow-left"></i> Retour à l'accueil</a
+      >
+    </div>
+  </body>
+</html>

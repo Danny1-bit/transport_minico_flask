@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Définir la matrice</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Lien Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1e2530 0%, #4e54c8 100%);
+        font-family: "Montserrat", "Roboto", Arial, sans-serif;
+      }
+      .modern-card {
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        background: rgba(255, 255, 255, 0.95);
+        transition: transform 0.2s;
+      }
+      .modern-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.25);
+      }
+      .modern-header {
+        background: transparent;
+        color: #fff;
+        padding: 2rem 0 1rem 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+      }
+      .modern-label {
+        font-weight: 600;
+        color: #222;
+      }
+      .input-group-text {
+        background: #4e54c8;
+        color: #fff;
+        border: none;
+      }
+      .modern-btn {
+        background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        border-radius: 2rem;
+        padding: 0.75rem 2rem;
+        transition: background 0.2s, transform 0.2s;
+      }
+      .modern-btn:hover {
+        background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+        transform: scale(1.04);
+      }
+      .modern-footer {
+        background: transparent;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 0 1rem 0;
+        font-size: 1rem;
+      }
+      .footer-socials a {
+        color: #fff;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+      }
+      .footer-socials a:hover {
+        color: #8f94fb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header modernisé -->
+    <div class="modern-header">
+      <i class=""></i> MiniCo - Définir la matrice
+    </div>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6">
+          <div class="card shadow modern-card">
+            <div class="card-body">
+              <h2 class="card-title text-center mb-4 text-dark fw-bold">
+                <i class="fa fa-table"></i> Définir le nombre
+              </h2>
+              <form action="{{ url_for('saisie_tableau') }}" method="post">
+                <div class="mb-4">
+                  <label for="fournisseurs" class="form-label modern-label">
+                    <i class="fa fa-truck me-2"></i>Nombre de fournisseurs
+                    :</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="fa fa-truck"></i
+                    ></span>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="fournisseurs"
+                      name="fournisseurs"
+                      required
+                      min="1"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label for="clients" class="form-label modern-label">
+                    <i class="fa fa-users me-2"></i>Nombre de clients :</label
+                  >
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      ><i class="fa fa-users"></i
+                    ></span>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="clients"
+                      name="clients"
+                      required
+                      min="1"
+                    />
+                  </div>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn modern-btn">
+                    Continuer <i class="fa fa-arrow-right ms-2"></i>
+                  </button>
+                </div>
+              </form>
+              <div class="text-center mt-4">
+                <a
+                  href="{{ url_for('menu') }}"
+                  class="btn btn-outline-primary"
+                  style="border-radius: 2rem; font-weight: 600"
+                >
+                  <i class="fa fa-arrow-left me-2"></i>Retour à l'accueil
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer modernisé -->
+    <footer class="modern-footer">
+      <div class="footer-socials mb-2">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      &copy; {{ year if year else 2025 }} MiniCo. Tous droits réservés.<br />
+      <span style="color: #8f94fb; font-weight: 600"
+        >Projet réalisé par KEVIN ET DANNY</span
+      >
+    </footer>
+    <!-- Script Bootstrap (optionnel pour les composants JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
