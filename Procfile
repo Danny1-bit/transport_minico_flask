@@ -1,0 +1,1 @@
+web: gunicorn transport_minico_flask.app:app 
